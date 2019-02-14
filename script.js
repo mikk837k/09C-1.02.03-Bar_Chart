@@ -1,21 +1,28 @@
 "use strict";
 
+window.addEventListener("DOMContentLoaded", init);
+
 const arr = [];
 
 let counter = 0;
 
-init();
-
 function init() {
-  // add 39 "0´s" to the array
+  console.log("init kørt");
 
+  populateArray();
+}
+
+function populateArray() {
+  console.log("populateArray kørt");
+
+  // add 39 "0´s" to the array
   counter++;
 
   const maxLengthOfArray = 40;
 
   if (counter <= maxLengthOfArray) {
     arr.unshift(0);
-    init();
+    populateArray();
   } else {
     console.log(arr);
     addRandomNumToArray();
@@ -34,7 +41,7 @@ function addRandomNumToArray() {
   //   random number between 0-35
   let randomNumber = makeRandomNumber(0, 35);
 
-  console.log(randomNumber);
+  //   console.log(randomNumber);
 
   arr.unshift(randomNumber);
 
@@ -61,7 +68,7 @@ function createBox() {
 
   document.querySelector("#container").appendChild(clone);
 
-  console.log(box);
+  //   console.log(box);
 
   return clone;
 }
