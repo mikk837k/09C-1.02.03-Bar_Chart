@@ -1,3 +1,7 @@
+body {
+  background-color: rgb(26, 26, 26);
+}
+
 #container {
   border: 2px solid black;
   widows: 100vw;
